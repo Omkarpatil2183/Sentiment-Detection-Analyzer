@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+</head>
+<body>
+    <h1>Sentiment Detection Analyzer</h1>
+    <form action="/analyze" method="post">
+        <textarea name="text" rows="5" cols="50" placeholder="Enter text here..."></textarea><br>
+        <button type="submit">Analyze</button>
+    </form>
+    {% if text %}
+    <h2>Results:</h2>
+    <p><strong>Text:</strong> {{ text }}</p>
+    <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+    <p><strong>Polarity:</strong> {{ polarity }}</p>
+    <p><strong>Subjectivity:</strong> {{ subjectivity }}</p>
+    {% endif %}
+</body>
+</html>
